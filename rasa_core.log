@@ -1,0 +1,581 @@
+Rasa process starting
+Rasa process starting
+Rasa process starting
+From C:\Users\heman\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/nlu/default/weathernlu\component_5_EmbeddingIntentClassifier.ckpt
+Scheduler started
+Looking for jobs to run
+No jobs; waiting until a job is added
+From C:\Users\heman\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\ops\resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From C:\Users\heman\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\keras\backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From C:\Users\heman\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+2020-04-13 19:16:12,022 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 534, in run_forever
+    self._run_once()
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 1735, in _run_once
+    event_list = self._selector.select(timeout)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2020-04-13 19:19:30,723 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\server.py", line 742, in serve
+    trigger_events(before_start, loop)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\server.py", line 604, in trigger_events
+    loop.run_until_complete(result)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\core\run.py", line 199, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\core\agent.py", line 233, in load_agent
+    remote_storage=remote_storage,
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\core\agent.py", line 878, in load_local_model
+    remote_storage=remote_storage,
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\core\agent.py", line 364, in load
+    interpreter = NaturalLanguageInterpreter.create(nlu_model)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\core\interpreter.py", line 45, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\core\interpreter.py", line 246, in __init__
+    self._load_interpreter()
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\core\interpreter.py", line 264, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\nlu\model.py", line 302, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\nlu\model.py", line 324, in create
+    components.validate_requirements(model_metadata.component_classes)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\rasa\nlu\components.py", line 47, in validate_requirements
+    + "Please install {}".format(", ".join(failed_imports))
+Exception: Not all required packages are installed. To use this pipeline, you need to install the missing dependencies. Please install spacy
+2020-04-13 19:24:46,111 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 1374, in create_server
+    % (sa, err.strerror.lower())) from None
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 5005): only one usage of each socket address (protocol/network address/port) is normally permitted
+2020-04-13 19:27:32,914 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 1096, in run
+    serve(**server_settings)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\server.py", line 770, in serve
+    loop.run_forever()
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 534, in run_forever
+    self._run_once()
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 1735, in _run_once
+    event_list = self._selector.select(timeout)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\engineio\client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2020-04-13 20:59:28,207 [ERROR]  Invalid response object for url b'/webhooks/telegram/webhook', Expected Type: HTTPResponse, Actual Type: <class 'NoneType'>
+2020-04-13 20:59:28,229 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\server.py", line 417, in write_response
+    response.output(
+AttributeError: 'NoneType' object has no attribute 'output'
+2020-04-13 20:59:28,681 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-04-13 21:33:36,976 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:33:39,112 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:33:43,248 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:33:51,691 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:34:08,164 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:34:14,961 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:34:17,095 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:34:21,232 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:34:29,669 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:34:40,605 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:34:46,113 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:35:18,552 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:35:41,189 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:36:18,989 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:36:41,631 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:37:19,430 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:37:42,069 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:38:19,867 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:38:42,512 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:39:20,309 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:39:42,952 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:40:20,745 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:40:43,390 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:41:21,184 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:41:43,830 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:42:21,624 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:42:44,269 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:43:22,063 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:43:44,709 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:44:22,533 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:44:35,992 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:44:38,127 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:44:42,265 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:44:44,843 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:44:44,977 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:44:47,113 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:44:50,401 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:44:51,249 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:45:01,554 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:45:06,536 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:45:17,994 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:45:22,667 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:45:38,981 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:45:45,289 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:45:50,128 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:46:23,106 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2020-04-13 21:48:43,477 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/webhook/slack/webhooks'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook/slack/webhooks not found
+2020-04-13 21:51:02,010 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/webhook/slack/webhooks'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook/slack/webhooks not found
+2020-04-13 21:52:37,103 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/webhook/slack/webhooks'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook/slack/webhooks not found
+2020-04-13 21:52:57,099 [ERROR]  Exception occurred while handling uri: 'http://5b46f30d.ngrok.io/webhook/slack/webhooks'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook/slack/webhooks not found
+2020-04-13 21:57:20,652 [ERROR]  Exception occurred while handling uri: 'http://b8f5d332.ngrok.io/webhook/slack/webhooks'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook/slack/webhooks not found
+2020-04-13 22:00:20,273 [ERROR]  Exception occurred while handling uri: 'http://b8f5d332.ngrok.io/webhook/slack/webhooks'
+Traceback (most recent call last):
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\heman\appdata\local\programs\python\python37\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook/slack/webhooks not found

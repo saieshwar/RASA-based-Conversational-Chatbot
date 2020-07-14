@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:/Users/heman/Desktop/myproject/models/NLU\\default\\weathernlu\\component_5_EmbeddingIntentClassifier.ckpt"
+all_model_checkpoint_paths: "C:/Users/heman/Desktop/myproject/models/NLU\\default\\weathernlu\\component_5_EmbeddingIntentClassifier.ckpt"

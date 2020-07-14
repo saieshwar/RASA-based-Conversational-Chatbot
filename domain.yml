@@ -1,0 +1,22 @@
+slots:
+  location:
+    type: text
+intents:
+ - greet
+ - inform
+ - goodbye
+entities:
+ - location
+templates:
+  utter_greet:
+    - 'Hello! How can I help?'
+  utter_ask_location:
+    - 'please confirm your location?'
+  utter_goodbye:
+    - 'Talk to you later.'
+    - 'Bye bye'
+actions:
+ - utter_greet
+ - utter_ask_location
+ - utter_goodbye
+ - action_weather
