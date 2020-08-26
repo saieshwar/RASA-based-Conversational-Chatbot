@@ -15,5 +15,9 @@ Chatbot builds a response based on the API call and responds to the user as belo
 Chatbot: “The weather in Charlotte tomorrow is 75F max and 70F min. the weather is clear sky.....................and so on”
 
 The framework used: RASA
+<br/>
+
 Languages used: Python
+<br/>
+
 Training: NLU model training based on manually created data (data.json) and dialogue management model training based on user generated stories (stories.md)
