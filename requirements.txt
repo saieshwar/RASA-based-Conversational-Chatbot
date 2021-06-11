@@ -43,7 +43,7 @@ slackclient==1.0
 rasa_core==0.14.5 
 webexteamssdk==1.2
 websocket-client==0.54.0
-websockets==7.0
+websockets==9.1
 twilio==6.31.0
 rocketchat-API==0.6.34
 rasa-x==0.0.1
